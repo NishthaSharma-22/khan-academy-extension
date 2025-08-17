@@ -72,4 +72,17 @@
   top: 20px;
   right: 100px;
   cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+.minimizeDesmos {
+  padding: 20px;
+  background-color: rgb(158, 156, 156);
+  position: fixed;
+  top: 20px;
+  right: 160px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }

@@ -35,10 +35,23 @@ function createDesmosWindow() {
   minimizeDesmos.textContent = "M";
   const iframe = document.createElement("iframe");
   iframe.src = "https://www.desmos.com/calculator";
-
   closeDesmos.onclick = () => desmosWin.remove();
+  //   minimizeDesmos.onclick = () => {
+  //     iframe.style.display = iframe.style.display === "none" ? "block" : "none";
+  //   };
+  iframe.style.display = "none";
+  minimizeDesmos.onclick = () => {
+    if (iframe.style.display === "none") {
+      iframe.style.display = "block";
+      minimizeDesmos.textContent = "HIDE";
+    } else {
+      iframe.style.display = "none";
+      minimizeDesmos.textContent = "SHOW";
+    }
+  };
   desmosWin.append(iframe);
   desmosWin.appendChild(closeDesmos);
+  desmosWin.appendChild(minimizeDesmos);
   document.body.append(desmosWin);
 }
 desmos.addEventListener("click", createDesmosWindow);
