@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Khan SAT Math Toolbar",
+  "description": "Adds a draggable window with a ref sheet on Khan Academy SAT practice pages",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": ["*://*.khanacademy.org/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["image.png"],
+      "matches": ["*://*.khanacademy.org/*"]
+    }
+  ]
+}
