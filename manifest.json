@@ -15,5 +15,16 @@
       "resources": ["image.png"],
       "matches": ["*://*.khanacademy.org/*"]
     }
-  ]
+  ],
+  "icons": {
+    "32": "icons/star32.png",
+    "128": "icons/star128.png"
+  },
+  "action": {
+    "default_icon": {
+      "32": "icons/star32.png",
+      "128": "icons/star128.png"
+    },
+    "default_title": "Khan SAT Math Toolbar"
+  }
 }

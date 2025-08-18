@@ -1,5 +1,8 @@
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
 #ref-btn {
-  background-color: grey;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
   padding: 20px;
   border-radius: 50px;
   color: white;
@@ -9,15 +12,16 @@
   z-index: 100000;
   cursor: pointer;
   border: none;
+  font-weight: 600;
 }
 #ref-win {
-  background-color: rgb(157, 156, 156) smoke;
+  background-color: rgb(157, 156, 156);
   padding: 5px;
   height: fit-content;
   width: fit-content;
   overflow-y: auto;
   z-index: 9999;
-  top: 40px;
+  top: 60px;
   right: 50px;
   position: fixed;
 }
@@ -25,23 +29,24 @@
   background-color: red;
   padding: 10px 20px;
   border: none;
-  border-radius: 5px;
   font-size: 20px;
   position: absolute;
   top: 5px;
   right: 0;
   cursor: pointer;
+  color: white;
 }
 
 #desmos {
   top: 20px;
   right: 80px;
   position: fixed;
-  z-index: 9999;
+  z-index: 999999;
   padding: 20px;
   border-radius: 50px;
-  background-color: grey;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
   color: white;
+  font-weight: 600;
   border: none;
   cursor: pointer;
 }
@@ -53,7 +58,7 @@
   width: 700px;
   overflow-y: auto;
   z-index: 9999;
-  top: 40px;
+  top: 60px;
   right: 100px;
   position: fixed;
   overflow-y: auto;
@@ -69,21 +74,22 @@
   padding: 20px;
   background-color: red;
   color: white;
-  top: 20px;
+  top: 60px;
   right: 100px;
   cursor: pointer;
   border: none;
-  border-radius: 5px;
+  /* border-radius: 5px; */
 }
 
 .minimizeDesmos {
   padding: 20px;
-  background-color: rgb(158, 156, 156);
+  background: linear-gradient(145deg, #4a90e2, #357abd);
+
   position: fixed;
-  top: 20px;
-  right: 160px;
+  top: 60px;
+  right: 148px;
   border: none;
-  border-radius: 5px;
+  /* border-radius: 5px; */
   cursor: pointer;
   color: white;
 }
@@ -91,4 +97,14 @@
 .img {
   user-select: none;
   cursor: move;
+}
+
+#ref-btn:hover,
+#desmos:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+#ref-btn:active,
+#desmos:active {
+  transform: translateY(1px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }

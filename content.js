@@ -3,7 +3,7 @@ const desmos = document.createElement("button");
 button.id = "ref-btn";
 desmos.id = "desmos";
 button.textContent = "XY";
-desmos.textContent = "DM";
+desmos.textContent = "DESMOS";
 document.body.appendChild(button);
 document.body.appendChild(desmos);
 
@@ -34,7 +34,7 @@ function createDesmosWindow() {
   closeDesmos.textContent = "X";
   const minimizeDesmos = document.createElement("button");
   minimizeDesmos.className = "minimizeDesmos";
-  minimizeDesmos.textContent = "M";
+  minimizeDesmos.textContent = "HIDE/SHOW";
   const iframe = document.createElement("iframe");
   iframe.src = "https://www.desmos.com/calculator";
   closeDesmos.onclick = () => desmosWin.remove();
