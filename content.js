@@ -12,6 +12,7 @@ function createRefWin() {
   const win = document.createElement("div");
   win.id = "ref-win";
   const img = document.createElement("img");
+  img.className = "img";
   img.src = chrome.runtime.getURL("image.png");
   const minimize = document.createElement("button");
   minimize.className = "minimize-btn";
@@ -40,7 +41,7 @@ function createDesmosWindow() {
   //   minimizeDesmos.onclick = () => {
   //     iframe.style.display = iframe.style.display === "none" ? "block" : "none";
   //   };
-  iframe.style.display = "none";
+  iframe.style.display = "block";
   minimizeDesmos.onclick = () => {
     if (iframe.style.display === "none") {
       iframe.style.display = "block";

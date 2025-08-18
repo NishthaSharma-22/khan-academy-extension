@@ -87,3 +87,8 @@
   cursor: pointer;
   color: white;
 }
+
+.img {
+  user-select: none;
+  cursor: move;
+}
