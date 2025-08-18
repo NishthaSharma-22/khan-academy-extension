@@ -32,7 +32,7 @@
   font-size: 20px;
   position: absolute;
   top: 5px;
-  right: 0;
+  right: 5px;
   cursor: pointer;
   color: white;
 }
@@ -95,6 +95,7 @@
 }
 
 .img {
+  -webkit-user-drag: none;
   user-select: none;
   cursor: move;
 }
