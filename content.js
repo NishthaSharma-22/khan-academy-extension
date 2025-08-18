@@ -20,6 +20,7 @@ function createRefWin() {
   win.appendChild(minimize);
   win.appendChild(img);
   document.body.appendChild(win);
+  makeDraggable(win);
 }
 
 button.addEventListener("click", createRefWin);
@@ -53,5 +54,27 @@ function createDesmosWindow() {
   desmosWin.appendChild(closeDesmos);
   desmosWin.appendChild(minimizeDesmos);
   document.body.append(desmosWin);
+  makeDraggable(desmosWin);
 }
 desmos.addEventListener("click", createDesmosWindow);
+
+function makeDraggable(win) {
+  let isDragging = false;
+  let offsetX = 0;
+  let offsetY = 0;
+
+  win.addEventListener("mousedown", (e) => {
+    isDragging = true;
+    offsetX = e.clientX - win.offsetLeft;
+    offsetY = e.clientY - win.offsetTop;
+    win.style.zIndex = 99999;
+  });
+  document.addEventListener("mousemove", (e) => {
+    if (!isDragging) return;
+    win.style.left = e.clientX - offsetX + "px";
+    win.style.top = e.clientY - offsetY + "px";
+  });
+  document.addEventListener("mouseup", () => {
+    isDragging = false;
+  });
+}
