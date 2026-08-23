@@ -1,111 +1,111 @@
-* {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-#ref-btn {
-  background: linear-gradient(135deg, #1e3c72, #2a5298);
-  padding: 20px;
-  border-radius: 50px;
-  color: white;
-  top: 20px;
+#sat-tbx-launcher {
+  position: fixed;
+  bottom: 20px;
   right: 20px;
-  position: fixed;
-  z-index: 100000;
-  cursor: pointer;
-  border: none;
-  font-weight: 600;
-}
-#ref-win {
-  background-color: rgb(157, 156, 156);
-  padding: 5px;
-  height: fit-content;
-  width: fit-content;
-  overflow-y: auto;
-  z-index: 9999;
-  top: 60px;
-  right: 50px;
-  position: fixed;
-}
-.minimize-btn {
-  background-color: red;
-  padding: 10px 20px;
-  border: none;
-  font-size: 20px;
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  cursor: pointer;
-  color: white;
-}
-
-#desmos {
-  top: 20px;
-  right: 80px;
-  position: fixed;
+  display: flex;
+  gap: 8px;
   z-index: 999999;
-  padding: 20px;
-  border-radius: 50px;
-  background: linear-gradient(135deg, #1e3c72, #2a5298);
-  color: white;
-  font-weight: 600;
+}
+
+.sat-tbx-launch-btn {
+  padding: 10px 14px;
   border: none;
+  border-radius: 8px;
+  background: #1a73e8;
+  color: #fff;
+  font-weight: 600;
+  font-size: 13px;
   cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
 }
 
-#desmosWin {
-  background-color: rgb(157, 156, 156) smoke;
-  padding: 5px;
-  height: 600px;
-  width: 700px;
-  overflow-y: auto;
-  z-index: 9999;
-  top: 60px;
-  right: 100px;
+.sat-tbx-launch-btn:hover {
+  background: #1558b0;
+}
+
+.sat-tbx-win {
   position: fixed;
-  overflow-y: auto;
+  width: 420px;
+  height: 520px;
+  min-width: 260px;
+  min-height: 180px;
+  max-width: 90vw;
+  max-height: 90vh;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  z-index: 999998;
+  display: flex;
+  flex-direction: column;
+  resize: both;
+  overflow: auto;
 }
 
-#desmosWin iframe {
+.sat-tbx-win-header {
+  display: flex;
+  align-items: center;
+  background: #202124;
+  color: #fff;
+  padding: 8px 10px;
+  cursor: move;
+  user-select: none;
+  flex: 0 0 auto;
+}
+
+.sat-tbx-win-title {
+  flex: 1;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.sat-tbx-win-hide,
+.sat-tbx-win-close {
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.sat-tbx-win-hide:hover,
+.sat-tbx-win-close:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.sat-tbx-win-body {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: auto;
+}
+
+.sat-tbx-collapsed {
+  resize: none;
+  height: auto !important;
+}
+
+.sat-tbx-collapsed .sat-tbx-win-body {
+  display: none;
+}
+
+.sat-tbx-ref-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.sat-tbx-desmos-frame {
   width: 100%;
   height: 100%;
-}
-
-.closeDesmos {
-  position: fixed;
-  padding: 20px;
-  background-color: red;
-  color: white;
-  top: 60px;
-  right: 100px;
-  cursor: pointer;
   border: none;
-  /* border-radius: 5px; */
+  display: block;
 }
 
-.minimizeDesmos {
-  padding: 20px;
-  background: linear-gradient(145deg, #4a90e2, #357abd);
-
-  position: fixed;
-  top: 60px;
-  right: 148px;
-  border: none;
-  /* border-radius: 5px; */
-  cursor: pointer;
-  color: white;
-}
-
-.img {
-  -webkit-user-drag: none;
-  user-select: none;
+.sat-tbx-interaction-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
   cursor: move;
-}
-
-#ref-btn:hover,
-#desmos:hover {
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
-}
-#ref-btn:active,
-#desmos:active {
-  transform: translateY(1px);
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }

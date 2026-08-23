@@ -1,13 +1,15 @@
 {
   "manifest_version": 3,
-  "name": "SAT Math Toolbar",
-  "description": "Adds a draggable window with a ref sheet on Khan Academy SAT practice pages",
-  "version": "1.0",
+  "name": "SAT Math Toolbox (Ref Sheet + Desmos)",
+  "version": "1.1",
+  "description": "Floating reference sheet and Desmos calculator for SAT math practice on Khan Academy.",
+  "permissions": ["storage"],
   "content_scripts": [
     {
       "matches": ["*://*.khanacademy.org/*"],
       "js": ["content.js"],
-      "css": ["styles.css"]
+      "css": ["styles.css"],
+      "run_at": "document_idle"
     }
   ],
   "web_accessible_resources": [
@@ -15,16 +17,5 @@
       "resources": ["image.png"],
       "matches": ["*://*.khanacademy.org/*"]
     }
-  ],
-  "icons": {
-    "32": "icons/star32.png",
-    "128": "icons/star128.png"
-  },
-  "action": {
-    "default_icon": {
-      "32": "icons/star32.png",
-      "128": "icons/star128.png"
-    },
-    "default_title": "Khan SAT Math Toolbar"
-  }
+  ]
 }
