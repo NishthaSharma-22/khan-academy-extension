@@ -1,6 +1,6 @@
 #sat-tbx-launcher {
   position: fixed;
-  bottom: 20px;
+  top: 20px;
   right: 20px;
   display: flex;
   gap: 8px;
@@ -112,3 +112,56 @@
   z-index: 5;
   cursor: move;
 }
+
+.sat-tbx-choice {
+}
+ 
+.sat-tbx-strike-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1.5px solid #9aa0a6;
+  background: #ffffff;
+  color: #5f6368;
+  font-size: 11px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 10;
+  opacity: 0.75;
+  padding: 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  z-index: 24;
+}
+ 
+.sat-tbx-strike-btn:hover {
+  opacity: 1;
+  background: #f1f3f4;
+}
+ 
+.sat-tbx-strike-active {
+  background: #d93025;
+  border-color: #d93025;
+  color: #fff;
+  opacity: 1;
+}
+ .sat-tbx-struck {
+  opacity: 0.55;
+  position: relative;
+}
+
+.sat-tbx-struck::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 2px;
+  background: #d93025;
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 20;
+}
+ 

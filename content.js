@@ -12,11 +12,14 @@
   refBtn.id = `${PREFIX}-ref-btn`;
   refBtn.className = `${PREFIX}-launch-btn`;
   refBtn.textContent = "XY";
+  refBtn.title = "Open SAT Math Reference Sheet";
+
 
   const desmosBtn = document.createElement("button");
   desmosBtn.id = `${PREFIX}-desmos-btn`;
   desmosBtn.className = `${PREFIX}-launch-btn`;
   desmosBtn.textContent = "DESMOS";
+  desmosBtn.title = "Open Desmos Calculator";
 
   launcherBar.append(refBtn, desmosBtn);
   document.body.appendChild(launcherBar);

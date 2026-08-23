@@ -7,7 +7,7 @@
   "content_scripts": [
     {
       "matches": ["*://*.khanacademy.org/*"],
-      "js": ["content.js"],
+      "js": ["content.js", "crossout.js"],
       "css": ["styles.css"],
       "run_at": "document_idle"
     }
