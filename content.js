@@ -101,6 +101,14 @@
     win.append(header, body, overlay);
     document.body.appendChild(win);
 
+    win.addEventListener("mousedown", () => {
+      document.querySelectorAll(`.${PREFIX}-win`).forEach((otherWin) => {
+        otherWin.style.zIndex = "999998";
+      });
+
+      win.style.zIndex = "999999";
+    });
+
     buildBody(body);
     restoreGeometry(win, id);
     makeDraggable(win, header, overlay, id);

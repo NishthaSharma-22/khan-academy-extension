@@ -66,13 +66,16 @@
   font-size: 16px;
   line-height: 1;
   cursor: pointer;
-  padding: 2px 8px;
+  padding: 5px 8px;
   border-radius: 4px;
 }
 
-.sat-tbx-win-hide:hover,
-.sat-tbx-win-close:hover {
+.sat-tbx-win-hide:hover {
   background: rgba(255, 255, 255, 0.15);
+}
+
+.sat-tbx-win-close:hover{
+  background: red;
 }
 
 .sat-tbx-win-body {
