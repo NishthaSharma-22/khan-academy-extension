@@ -1,16 +1,55 @@
-## SAT Math Toolbar (extension)
+## SAT Math Toolbox Chrome Extension
 
-when I was practicing for the SAT, I always found it annoying to switch tabs - one for desmps, another for the formula sheet - while trying to stay focused on the problem. now, as an online tutor, i see my students running into the exact same issue. it feels weird telling them to hop between windows when the real test keeps everything in one place.
+[![Chrome Web Store](https://img.shields.io/chrome-web-store/users/hkflbpkbhdlhikfbophoenepogkpklnf?label=installs&color=blue&style=flat)](https://chromewebstore.google.com/detail/sat-math-toolbox-ref-shee/hkflbpkbhdlhikfbophoenepogkpklnf)
+[![Rating](https://img.shields.io/chrome-web-store/rating/hkflbpkbhdlhikfbophoenepogkpklnf?style=flat)](https://chromewebstore.google.com/detail/sat-math-toolbox-ref-shee/hkflbpkbhdlhikfbophoenepogkpklnf)
+[![Version](https://img.shields.io/chrome-web-store/v/hkflbpkbhdlhikfbophoenepogkpklnf?style=flat)](https://chromewebstore.google.com/detail/sat-math-toolbox-ref-shee/hkflbpkbhdlhikfbophoenepogkpklnf)
 
-so i made this extension - it puts the tools (desmos graphing calculator and ref sheet) right there ton top of the screen on the same page - no more switching tabs and you can practice in the same flow and format as you'll see on the test day.
+I tutor SAT math online, and the tab-juggling was driving me (and my students) crazy - one tab open for Desmos, another for the formula sheet, and the actual practice problem somewhere in between. on the real digital SAT, everything is right there on the same screen. so I kept telling kids "just open another tab" knowing full well that's not how it works on test day. felt wrong.
 
-<img src="assets/toolbar.png" alt="toolbar in action" width="550px"/>
-<img src="assets/desmos.png" alt="desmos window" width="550px"/>
-<img src="assets/ref_sheet.png" alt="draggable ref sheet" width="550px"/>
+so I built this. it's a Chrome extension that puts Desmos and the reference sheet directly on top of Khan Academy's SAT practice — floating, draggable windows that stay out of your way until you need them. practice the way the test actually feels.
 
+---
 
-### how to use
-1. download the zip/clone the repo
-2. go to extensions, load unpacked
-3. select the folder, and refresh
-4. go to khan academy sat math practice and you should be able to see the extension in action
+<img src="assets/new-images/demo2.png" alt="toolbar, Desmos, and answer elimination in action" width="600px"/>
+
+---
+
+### features
+
+- **Desmos calculator** — floating, resizable window you can drag anywhere on screen. stays on top of the problem so you never lose your place
+- **Reference sheet** — the official SAT math formula sheet, one click away, also draggable and resizable
+- **Answer elimination** — cross out answer choices just like on the real digital SAT. click ✕ next to any option to strike it, click again to undo
+- **Window memory** — positions and sizes are saved between sessions so your layout is always where you left it
+- **Active window focus** — whichever window you click automatically comes to the front
+
+<img src="assets/new-images/main.png" alt="ref sheet and Desmos open side by side" width="600px"/>
+
+---
+
+### install
+
+**→ [Add to Chrome](https://chromewebstore.google.com/detail/sat-math-toolbox-ref-shee/hkflbpkbhdlhikfbophoenepogkpklnf)**
+
+then go to [Khan Academy SAT math practice](https://www.khanacademy.org/test-prep/digital-sat) — the toolbar appears in the top-right corner automatically.
+
+<img src="assets/new-images/demo1.png" alt="Chrome Web Store listing" width="600px"/>
+
+**or run it locally:**
+1. clone the repo or download the zip
+2. go to `chrome://extensions` and enable Developer Mode
+3. click "Load unpacked" and select the folder
+4. refresh Khan Academy — toolbar shows up in the top right
+
+---
+
+### project structure
+
+```
+sat-math-toolbox/
+├── content.js          # toolbar, floating windows, drag/resize/persistence
+├── crossout.js         # answer choice elimination
+├── styles.css          # styling
+├── manifest.json       # Chrome extension config
+├── image.png           # SAT math reference sheet
+└── icons/              # extension icons
+```
